@@ -1,22 +1,113 @@
-*{
-    margin: 0%;
-    padding: 0%;
+body{
+    margin: 0;
+    padding: 0;
     width: 100%;
-    height: 100vh;
+    height: auto;
     box-sizing: border-box;
+
 }
-main{
-    margin: 0%;
-    padding: 0%;
+header{
+    margin: 0;
+    padding: 0;
     width: 100%;
-    height: 100vh;
+    height: 15vh;
+    background-image: url(gg.jpg);
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    /* border-bottom-color: black; */
+
+}
+.logo{
+    width: 30%;
+    font-size: 12px;
+    text-align: center;
+    
+   
+}
+.menu{
+    width: 45%;
+    display: flex;
+   justify-content: space-evenly;
+   font-weight: bold;
+}
+.menu a{
+    color: rgba(255, 255, 255, 0.683);
+    text-decoration: none;
+}
+a.about{
+    color: #00b894;
+}
+nav{
+    padding-top: 50px;
+   width: 100%;
+   height: 1300px;
+   background-color: rgb(118, 117, 117);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-family: consolas;
+}
+.main{
+    width: 1000px;
+    height: 300px;
+    position: relative;
+    /* background-color: #333; */
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.main .box{
+    position: relative;
+    cursor: pointer;
+}
+.main .box .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+
+}
+.main .box .face.face1{
+    position: relative;
+    background-color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
 }
-.top{
-    width: 70%;
-    height: 70%;
-    border-radius: 10px;
-    box-shadow:  0px 0px 20px  rgb(80, 77, 77);
+.main .box:hover .face.face1{
+    background-color: #ff0057;
+    transform: translateY(0);
+}
+.main .box .face.face1 .content{
+    opacity: 0.2;
+    transform: 0.5s;
+}
+.main .box .face.face1:hover .content{
+    opacity: 1;
+}
+.main .box .face.face1 .content h3{
+    /* margin: 10px 0 0; */
+    color: #fff;
+    align-items: center;
+    font-size: 1.5em;
+}
+.main .box .face.face2{
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+.main .box:hover .face2{
+    transform: translateY(0);
 }
